@@ -1,63 +1,36 @@
-import './styles/App.css';
-import React, { useEffect } from "react";
-import styled, { createGlobalStyle } from "styled-components";
-import { vres } from "./mixin";
+import React from "react";
+import { BrowserView, MobileView } from 'react-device-detect';
+import { BrowserStyle, MobileStyle } from './components/GlobalStyle'
 
-const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-const isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-const GlobalStyle = createGlobalStyle`
-*,
-*::after,
-*::before {
-  margin: auto;
-  padding: 0;
-  box-sizing: border-box;
-  user-select: none;
-  transform-style: preserve-3d;
-  -webkit-tap-highlight-color: transparent;
-}
+import Menu from './components/Menu';
+import Cursor from "./components/Cursor";
+import Typewriter from "./components/Typewriter"
+import SearchPhotos from "./components/Carousel"
 
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: ${(props) => vres(props.isChrome ? 100 : 10)};
-  height: 100vh;
-  overflow: hidden;
-  background-image: radial-gradient(white, #2a9aea);
-  transform: translateZ(0);
-}
-`;
+//import PlaySound from "./components/Sound"
 
-const SafariWarning = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  padding: 16px;
-  text-align: center;
-  color: white;
-  font-weight: bold;
-  background-color: #e6804d;
-`;
+import './components/App.css'
+
 
 function App() {
-  useEffect(() => {
-    const isBrave = navigator.brave !== undefined;
-    isBrave && document.body.classList.add("brave");
-  });
+    return (
+        < div >
+            <BrowserView>
+                <BrowserStyle />
+                <Menu />
+                <Typewriter />
+                <SearchPhotos />
+                <Cursor />
+            </BrowserView>
 
-  return (
-    <div>
-      {isSafari && (
-        <SafariWarning>
-          Currently Safari doesn't fully support this site. Please switch to
-          Chrome for better viewing experience.
-        </SafariWarning>
-      )}
-      <GlobalStyle isChrome={isChrome} />
-    </div>
-  );
+            <MobileView>
+                <MobileStyle />
+                <Menu />
+                <Typewriter />
+                <SearchPhotos />
+            </MobileView>
+        </div >
+    );
 }
 
 export default App;

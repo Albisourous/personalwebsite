@@ -1,0 +1,91 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Valorant";
+  overflow-x: hidden;
+
+  /* overflow-y: hidden;  */
+
+  margin: auto;
+  padding: 0;
+  background-color: black;
+  color: white;
+  cursor: none;
+}
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  box-shadow: 0px 0px 0px 5px white;
+  transition: border 0.6s linear;
+  margin: 0.5em;
+}
+
+#menu-outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.alignleft {
+  padding-left: 2%;
+  top: 36px;
+  flex: 1;
+}
+
+.aligncenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 3vw;
+  filter: grayscale(100%);
+  overflow: hidden;
+}
+
+.carousel {
+  padding-top: 3vh;
+  max-height: 75vh;
+}
+
+.alignright {
+  padding-right: 4%;
+  top: 36px;
+  flex: 1;
+  text-align: right;
+}
+
+.boxes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 66vh;
+  font-size: 3vw;
+}
+
+.cursor-dot {
+  opacity: 1;
+  position: fixed;
+  top: 50%;
+  left: -50%;
+  width: 2vw;
+  height: 2vw;
+  border-radius: 50%;
+  z-index: inherit;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  white-space: nowrap;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  background-color: white;
+  box-shadow: 0.1em 0.1em 0 rgba(255, 0, 0, 1),
+    -0.1em -0.1em 0 rgba(0, 255, 255, 1);
+}
