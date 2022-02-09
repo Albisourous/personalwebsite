@@ -5,11 +5,13 @@ import { BrowserStyle, MobileStyle } from './components/GlobalStyle'
 import Menu from './components/Menu';
 import Cursor from "./components/Cursor";
 import Typewriter from "./components/Typewriter"
-import SearchPhotos from "./components/Carousel"
+//import SearchPhotos from "./components/Carousel"
+import Slider from "./components/Slider"
 
 //import PlaySound from "./components/Sound"
 
 import './components/App.css'
+import { ProjectsData } from "./components/ProjectsData";
 
 
 function App() {
@@ -19,7 +21,7 @@ function App() {
                 <BrowserStyle />
                 <Menu />
                 <Typewriter />
-                <SearchPhotos />
+                <Slider slides={ProjectsData} />
                 <Cursor />
             </BrowserView>
 
@@ -27,7 +29,7 @@ function App() {
                 <MobileStyle />
                 <Menu />
                 <Typewriter />
-                <SearchPhotos />
+                <Slider slides={ProjectsData} />
             </MobileView>
         </div >
     );

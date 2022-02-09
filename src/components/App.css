@@ -79,7 +79,7 @@ img {
   width: 2vw;
   height: 2vw;
   border-radius: 50%;
-  z-index: inherit;
+  z-index: 10;
   pointer-events: none;
   mix-blend-mode: difference;
   white-space: nowrap;
@@ -88,4 +88,55 @@ img {
   background-color: white;
   box-shadow: 0.1em 0.1em 0 rgba(255, 0, 0, 1),
     -0.1em -0.1em 0 rgba(0, 255, 255, 1);
+}
+
+.slider {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: top;
+  overflow-y: none;
+  height: 75vh;
+}
+
+.image {
+  width: 50vw;
+  height: auto;
+  filter: grayscale(100%);
+}
+
+.right-arrow {
+  position: absolute;
+  top: 50%;
+  right: 32px;
+  font-size: 3rem;
+  z-index: 1;
+  cursor: pointer;
+  user-select: none;
+  background-color: transparent;
+  mix-blend-mode: difference;
+}
+
+.left-arrow {
+  position: absolute;
+  top: 50%;
+  left: 32px;
+  font-size: 3rem;
+  z-index: 1;
+  cursor: pointer;
+  user-select: none;
+  background-color: transparent;
+  mix-blend-mode: difference;
+}
+
+.slide {
+  opacity: 0;
+  transition-duration: 1s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
 }
