@@ -5,7 +5,6 @@ import { BrowserStyle, MobileStyle } from './components/GlobalStyle'
 import Menu from './components/Menu';
 import Cursor from "./components/Cursor";
 import Typewriter from "./components/Typewriter"
-//import SearchPhotos from "./components/Carousel"
 import Slider from "./components/Slider"
 
 //import PlaySound from "./components/Sound"

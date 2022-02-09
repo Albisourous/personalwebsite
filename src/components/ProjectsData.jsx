@@ -1,32 +1,33 @@
+import Minecraft from "../images/minecraft.jpg";
+import Quantum from "../images/quantum.jpg";
+import Knight from "../images/knight.jpg";
+import Airplane from "../images/airplane.jpeg";
+import Office from "../images/office.jpg";
+
 export const ProjectsData = [
   {
-    image: "https://source.unsplash.com/1600x900/?1,airplane",
-    link: "https://github.com/Albisourous",
+    image: Minecraft,
+    link: "https://github.com/Albisourous/minecraftworldgeneration",
     description: "Project",
   },
   {
-    image: "https://source.unsplash.com/1600x900/?2,airplane",
-    link: "https://github.com/Albisourous",
+    image: Quantum,
+    link: "https://github.com/Albisourous/quantumgameoflife",
     description: "Project",
   },
   {
-    image: "https://source.unsplash.com/1600x900/?3,airplane",
-    link: "https://github.com/Albisourous",
+    image: Knight,
+    link: "https://github.com/Albisourous/aknightinspace",
     description: "Project",
   },
   {
-    image: "https://source.unsplash.com/1600x900/?4,airplane",
-    link: "https://github.com/Albisourous",
+    image: Airplane,
+    link: "https://github.com/Albisourous/aeroinfo",
     description: "Project",
   },
   {
-    image: "https://source.unsplash.com/1600x900/?5,airplane",
-    link: "https://github.com/Albisourous",
-    description: "Project",
-  },
-  {
-    image: "https://source.unsplash.com/1600x900/?6,airplane",
-    link: "https://github.com/Albisourous",
+    image: Office,
+    link: "https://github.com/Albisourous/officehours2.0",
     description: "Project",
   },
 ];

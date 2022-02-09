@@ -33,10 +33,11 @@ const Slider = ({ slides }) => {
             {index === current && (
               <img
                 src={slide.image}
-                alt="travel image"
+                alt={slide.description}
                 className="image"
-                onClick={() => window.open(slide.link, "_blank")}
-              />
+                onClick={() => window.open(slide.link)}
+                onMouseEnter={(e) => {}}
+              ></img>
             )}
           </div>
         );

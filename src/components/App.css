@@ -9,7 +9,7 @@
   font-family: "Valorant";
   overflow-x: hidden;
 
-  /* overflow-y: hidden;  */
+  overflow-y: hidden;
 
   margin: auto;
   padding: 0;
@@ -101,33 +101,35 @@ img {
 }
 
 .image {
-  width: 50vw;
   height: auto;
+  max-height: 50vh;
+  max-width: 50vw;
+  overflow-x: hidden;
   filter: grayscale(100%);
 }
 
 .right-arrow {
   position: absolute;
   top: 50%;
-  right: 32px;
+  right: 100px;
   font-size: 3rem;
   z-index: 1;
   cursor: pointer;
   user-select: none;
   background-color: transparent;
-  mix-blend-mode: difference;
+  mix-blend-mode: lighten;
 }
 
 .left-arrow {
   position: absolute;
   top: 50%;
-  left: 32px;
+  left: 100px;
   font-size: 3rem;
   z-index: 1;
   cursor: pointer;
   user-select: none;
   background-color: transparent;
-  mix-blend-mode: difference;
+  mix-blend-mode: lighten;
 }
 
 .slide {
