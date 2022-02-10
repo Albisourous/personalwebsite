@@ -8,26 +8,26 @@ export const ProjectsData = [
   {
     image: Minecraft,
     link: "https://github.com/Albisourous/minecraftworldgeneration",
-    description: "Project",
+    title: "Minecraft Peridynamics",
   },
   {
     image: Quantum,
     link: "https://github.com/Albisourous/quantumgameoflife",
-    description: "Project",
+    title: "Quantum Game of Life",
   },
   {
     image: Knight,
     link: "https://github.com/Albisourous/aknightinspace",
-    description: "Project",
+    title: "A Knight in Space",
   },
   {
     image: Airplane,
     link: "https://github.com/Albisourous/aeroinfo",
-    description: "Project",
+    title: "AeroInfo",
   },
   {
     image: Office,
     link: "https://github.com/Albisourous/officehours2.0",
-    description: "Project",
+    title: "OfficeHours 2.0",
   },
 ];

@@ -20,6 +20,10 @@ const Slider = ({ slides }) => {
     return null;
   }
 
+  function changeBackground(e) {
+    e.target.style.background = "red";
+  }
+
   return (
     <section className="slider">
       <FaArrowAltCircleLeft className="left-arrow" onClick={prevSlide} />
@@ -30,15 +34,20 @@ const Slider = ({ slides }) => {
             className={index === current ? "slide active" : "slide"}
             key={index}
           >
-            {index === current && (
-              <img
-                src={slide.image}
-                alt={slide.description}
-                className="image"
-                onClick={() => window.open(slide.link)}
-                onMouseEnter={(e) => {}}
-              ></img>
-            )}
+            <div class="imgbox">
+              {index === current && (
+                <img
+                  src={slide.image}
+                  alt={slide.title}
+                  className="image"
+                  onClick={() => window.open(slide.link)}
+                  onMouseOver={changeBackground}
+                ></img>
+              )}
+              <div class="imgbox-layer_top">
+                <div class="imgbox-text">{slide.title}</div>
+              </div>
+            </div>
           </div>
         );
       })}
