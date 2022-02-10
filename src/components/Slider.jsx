@@ -40,11 +40,13 @@ const Slider = ({ slides }) => {
                   src={slide.image}
                   alt={slide.title}
                   className="image"
-                  onClick={() => window.open(slide.link)}
                   onMouseOver={changeBackground}
                 ></img>
               )}
-              <div class="imgbox-layer_top">
+              <div
+                class="imgbox-layer_top"
+                onClick={() => window.open(slide.link)}
+              >
                 <div class="imgbox-text">{slide.title}</div>
               </div>
             </div>

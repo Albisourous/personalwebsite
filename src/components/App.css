@@ -148,6 +148,7 @@ img {
   transform: scale(1.08);
 }
 
+/* Based on http://css-workshop.com/hover-box-text-over-images-on-hover-and-more/ */
 .imgbox,
 .imgbox * {
   box-sizing: border-box;

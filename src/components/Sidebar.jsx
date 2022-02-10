@@ -11,7 +11,7 @@ const Sidebar = () => {
   return (
     <div className="alignright">
       <CornerPiece
-        value={<img src={myLogo} alt="AS" width="100vw" height="100vh" />}
+        value={<img src={myLogo} alt="menu" width="100vw" height="100vh" />}
       />
     </div>
   );
