@@ -10,7 +10,7 @@ import Slider from "./components/Slider"
 //import PlaySound from "./components/Sound"
 
 import './components/App.css'
-import { ProjectsData } from "./components/ProjectsData";
+import { MyData } from "./components/MyData";
 
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
                 <BrowserStyle />
                 <Menu />
                 <Typewriter />
-                <Slider slides={ProjectsData} />
+                <Slider slides={MyData} />
                 <Cursor />
             </BrowserView>
 
@@ -28,7 +28,7 @@ function App() {
                 <MobileStyle />
                 <Menu />
                 <Typewriter />
-                <Slider slides={ProjectsData} />
+                <Slider slides={MyData} />
             </MobileView>
         </div >
     );

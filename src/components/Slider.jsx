@@ -1,7 +1,7 @@
 // Code based on https://www.youtube.com/watch?v=l1MYfu5YWHc&ab_channel=BrianDesign
 
 import React, { useState } from "react";
-import { ProjectsData } from "./ProjectsData";
+import { MyData } from "./MyData";
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
 
 const Slider = ({ slides }) => {
@@ -20,15 +20,11 @@ const Slider = ({ slides }) => {
     return null;
   }
 
-  function changeBackground(e) {
-    e.target.style.background = "red";
-  }
-
   return (
     <section className="slider">
       <FaArrowAltCircleLeft className="left-arrow" onClick={prevSlide} />
       <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide} />
-      {ProjectsData.map((slide, index) => {
+      {MyData.map((slide, index) => {
         return (
           <div
             className={index === current ? "slide active" : "slide"}
@@ -40,13 +36,9 @@ const Slider = ({ slides }) => {
                   src={slide.image}
                   alt={slide.title}
                   className="image"
-                  onMouseOver={changeBackground}
                 ></img>
               )}
-              <div
-                class="imgbox-layer_top"
-                onClick={() => window.open(slide.link)}
-              >
+              <div class="imgbox-top" onClick={() => window.open(slide.link)}>
                 <div class="imgbox-text">{slide.title}</div>
               </div>
             </div>

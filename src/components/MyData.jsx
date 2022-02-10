@@ -3,8 +3,14 @@ import Quantum from "../images/quantum.jpg";
 import Knight from "../images/knight.jpg";
 import Airplane from "../images/airplane.jpeg";
 import Office from "../images/office.jpg";
+import Contact from "../images/contact.jpg";
 
-export const ProjectsData = [
+export const MyData = [
+  {
+    image: Contact,
+    link: "https://www.linkedin.com/in/albin-shrestha/",
+    title: "Contact",
+  },
   {
     image: Minecraft,
     link: "https://github.com/Albisourous/minecraftworldgeneration",
