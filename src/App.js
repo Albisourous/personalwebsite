@@ -9,7 +9,6 @@ import Slider from "./components/Slider"
 
 //import PlaySound from "./components/Sound"
 
-import './components/App.css'
 import { MyData } from "./components/MyData";
 
 
