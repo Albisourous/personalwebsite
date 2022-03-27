@@ -159,7 +159,7 @@ img {
   background: rgba(0, 0, 0, 0.2);
   color: #fff;
   padding: 15px;
-  transition: all 0.4s ease-in-out 0s;
+  transition: all .5s ease-in-out 0s;
 }
 
 .imgbox:hover .imgbox-top,
@@ -233,25 +233,6 @@ export const MobileStyle = createGlobalStyle`
   flex: 1;
   text-align: right;
   padding-top: 16px;
-}
-
-.cursor-dot {
-  opacity: 1;
-  position: fixed;
-  top: 50%;
-  left: -50%;
-  width: 2vw;
-  height: 2vw;
-  border-radius: 50%;
-  z-index: 10;
-  pointer-events: none;
-  mix-blend-mode: difference;
-  white-space: nowrap;
-  opacity: 1;
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-  background-color: white;
-  box-shadow: 0.1em 0.1em 0 rgba(255, 0, 0, 1),
-    -0.1em -0.1em 0 rgba(0, 255, 255, 1);
 }
 
 .slider {
@@ -351,7 +332,6 @@ img {
   transition: all 0.4s ease-in-out 0s;
 }
 
-
 .imgbox .imgbox-text {
   text-align: center;
   font-size: 18px;
@@ -369,7 +349,5 @@ img {
    url("./fonts/Valorant.ttf") format("truetype");
   font-weight: bold;
 }
-
-
 
 `;
