@@ -1,0 +1,29 @@
+$breakpoints: (
+  "mobile": (
+    min-width: 320px,
+  ),
+  "tablet": (
+    min-width: 481px,
+  ),
+  "desktop": (
+    min-width: 1025px,
+  ),
+);
+
+@mixin if-size($breakpoint) {
+  $raw-query: map-get($new-breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(
+      type-of($raw-query) == "string",
+      unquote($raw-query),
+      inspect($raw-query)
+    );
+
+    @media #{$query} {
+      @content;
+    }
+  } @else {
+    @error 'Breakpoint not found';
+  }
+} ;

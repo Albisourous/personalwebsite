@@ -1,0 +1,6 @@
+// Returns a value of spacing so I can change the px width anytime
+$multiplier: 8px;
+
+@function spacing($value) {
+  @return $value * $multiplier;
+}
