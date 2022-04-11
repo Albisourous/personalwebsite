@@ -1,0 +1,18 @@
+* {
+  cursor: none;
+}
+
+.cursor-dot {
+  position: fixed;
+  width: 2vw;
+  height: 2vw;
+  border-radius: 50%;
+  z-index: 2147483647;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  white-space: nowrap;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  background-color: white;
+  box-shadow: 0.1em 0.1em 0 rgba(255, 0, 0, 1),
+    -0.1em -0.1em 0 rgba(0, 255, 255, 1);
+}

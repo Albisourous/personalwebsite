@@ -1,7 +1,25 @@
 import React, { useState } from "react";
 import Image from "next/image";
+import {
+  ProSidebar,
+  Menu,
+  MenuItem,
+  SidebarHeader,
+  SidebarFooter,
+  SidebarContent,
+} from "react-pro-sidebar";
+import "react-pro-sidebar/dist/css/styles.css";
+import { FaList, FaRegHeart } from "react-icons/fa";
+import {
+  FiHome,
+  FiLogOut,
+  FiArrowLeftCircle,
+  FiArrowRightCircle,
+} from "react-icons/fi";
+import { RiPencilLine } from "react-icons/ri";
+import { BiCog } from "react-icons/bi";
 
-const Sidebar = () => {
+const Sidebar = (collapsed: Boolean) => {
   return (
     <div id="sidebar">
       <ProSidebar>

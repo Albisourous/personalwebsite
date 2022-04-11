@@ -1,0 +1,50 @@
+@mixin respond-to($breakpoint) {
+  $raw-query: map-get($breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(
+      type-of($raw-query) == "string",
+      unquote($raw-query),
+      inspect($raw-query)
+    );
+
+    @media #{$query} {
+      @content;
+    }
+  } @else {
+    @error 'No value found for `#{$breakpoint}`. '
+          + 'Make sure you have passed a valid value as defined in `$breakpoints` map in variables.scss.';
+  }
+}
+
+@mixin base-input {
+  @include text("12px");
+  background-color: #f9f9f9;
+  padding: 12px 16px;
+  margin: 8px 0 0px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: $ra-navy;
+
+  &:disabled {
+    background-color: $ra-grey-blue;
+    color: $ra-navy;
+    -webkit-text-fill-color: $ra-navy;
+    opacity: 1; /* required on iOS */
+    font-weight: 600;
+  }
+}
+
+@mixin flex($justify, $align: "initial", $direction: "initial") {
+  display: flex;
+  justify-content: unquote($justify);
+  align-items: unquote($align);
+  flex-direction: unquote($direction);
+}
+
+@mixin text($size: 16px, $weight: intial, $family: "sofia-pro") {
+  font-family: $family;
+  font-size: unquote($size);
+  font-weight: $weight;
+}
